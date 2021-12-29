@@ -44,13 +44,24 @@ body.active{
     --white-color:#111;
     --black-color:#fff;
     --light-color:rgba(255,255,255,.3);
-    background:#8b8a8a
+    background:#222
 }
-
 section{
     padding: 1.5rem 9%;
 }
 
+.heading{
+    padding: 1rem 0;
+    margin-top: 2rem;
+    border-bottom: .1rem solid var(--light-color);
+    font-size: 3rem;
+    color: var(--black-color);
+    text-transform: uppercase;
+}
+.heading span{
+    color: var(--orange);
+    text-transform: uppercase;
+}
 .btn{
     display: inline-block;
     margin-top: 1rem;
@@ -60,6 +71,10 @@ section{
     font-size: 1.5rem;
     padding: 0.9rem 3.5rem;
     cursor: pointer;
+}
+.btn:hover{
+    background: var(--orange);
+    color: gray;
 }
 header{
     width: 100%;
@@ -87,8 +102,6 @@ header form{
     background: var(--black-color);
     overflow: hidden;
 }
-
-
 header form input{
     height: 100%;
     width: 100%;
@@ -200,7 +213,7 @@ header.active{
     min-height: 50vw;
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
+    flex-wrap: wrap-reverse;
     gap: 1.5rem;
 }
 .accueil .content{
@@ -220,13 +233,44 @@ header.active{
 }
 
 .accueil .content h3{
-    color: var(--orange);
+    color: var(--black-color);
     font-size: 8rem;
     text-transform: uppercase;
 }
-
-
-
+.categories .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+.categories .box-container .box{
+    height: 30rem;
+    flex: 1 1 40rem;
+    border-radius: 0.5rem;
+    position: relative;
+    overflow: hidden;
+}
+.categories .box-container .box img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.categories .box-container .box:hover img{
+    transform: scale(1.1);
+}
+.categories .box-container .content{
+    position: absolute;
+    bottom: 7rem;left: 2rem;
+}
+.categories .box-container .content span{
+    font-size: 2rem;
+    color: var(--orange);
+}
+.categories .box-container .content h3{
+    font-size: 2rem;
+    color: #3337;
+    text-transform: uppercase;
+    padding-top: 0.5em;
+}
 
 
 
@@ -249,6 +293,14 @@ header.active{
     header{
         padding: 1.5rem;
     }
+
+    section{
+        padding: 1.5rem;
+    }
+
+    .accueil .content h3{
+        font-size: 5rem;
+    }
 }
 
 @media (max-width:768px) {
@@ -264,6 +316,13 @@ header.active{
     header.active{
         transform: translateY(-12.5rem);
     }
+
+    .accueil .content{
+        text-align: center;
+    }
+    .accueil .image img{
+        width: 100%;
+    }
 }
 
 
@@ -271,5 +330,10 @@ header.active{
     
     html{
         font-size: 50%;
+    }
+    .heading{
+        text-align: center;
+        font-size: 2.5rem;
+        border-bottom: none;
     }
 }
