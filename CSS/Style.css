@@ -272,6 +272,41 @@ header.active{
     padding-top: 0.5em;
 }
 
+.produits .produits-slider .slide{
+    overflow: hidden;
+    position: relative;
+    border-bottom: 0.1rem solid var(--light-color);
+    border-radius: .5rem;
+background: var(--white-color);
+}
+
+.produits .produits-slider .slide .image{
+    padding: 1rem;
+}
+
+.produits .produits-slider .slide .image img{
+    height: 50rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+.produits .produits-slider .slide .content{
+    padding:2rem;
+    border-top:.1rem solid var(--light-color);
+}
+
+.produits .produits-slider .slide .icons{
+    position: absolute;
+    top: 0;right: 1rem;
+}
+.produits .produits-slider .slide .icons a{
+    height: 3.5rem;
+    width: 3.5rem;
+    line-height:3.5rem;text-align: center;font-size: 2rem;border-radius: 50%;background: var(--black-color);
+    color: var(--white-color);
+    margin-top:.5rem;display: block;
+}
+
 
 
 
